@@ -7,6 +7,8 @@ assembler: $(OBJS)
 
 $(OBJS): assembler.h
 
+parse: parse.o
+		$(CC) -o parse.o parse.c 
 clean:
 		rm -f assembler *.o *~ tmp*
 
